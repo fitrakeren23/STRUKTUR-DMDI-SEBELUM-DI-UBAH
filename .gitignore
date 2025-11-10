@@ -1,0 +1,38 @@
+# CodeIgniter 3 & 4 common ignores
+# System core (CI3's system folder can be committed if needed; CI4 vendor is recreated by composer)
+system/core/Cache/
+application/cache/
+writable/cache/
+writable/logs/
+writable/sessions/
+writable/temp/
+
+# Environment / credentials
+.env
+application/config/database.php
+
+# Composer dependencies (for CI4 later)
+vendor/
+
+# Node (jika nanti pakai tooling front-end)
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.orig
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Uploads (jika besar; boleh commit placeholder)
+uploads/
+public/uploads/
+assets/uploads/
