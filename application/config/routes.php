@@ -70,5 +70,6 @@ $route = array(
 );
 
 $route['(:any)'] = 'news/$1/$2';
+$route['lang/(:any)'] = 'lang/switch/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

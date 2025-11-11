@@ -1,13 +1,15 @@
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/system.*
-RewriteRule ^(.*)$ index.php?/$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)$ index.php?/$1 [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /dmdi/
 
-#RewriteEngine on
-#RewriteCond %{REQUEST_URI} !maintenance.html
-#RewriteCond %{REQUEST_FILENAME} !(styles|images).+$
-#RewriteCond %{REMOTE_ADDR} !^144\.4\.78\.177$
-#RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
-#RewriteRule (.*) /maintenance.html [R,L]
+  # Blok akses langsung ke system
+  RewriteRule ^system/(.*)$ - [F,L,NC]
+
+  # Lewatkan file atau direktori fisik
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route ke index.php (hilangkan tanda tanya lama)
+  RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
