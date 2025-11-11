@@ -30,7 +30,7 @@
                     ?>
                     <ul class="nav justify-content-center justify-content-md-end social-icons">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo $pecahd[0]; ?>"><i class="fa fa-facebook"></i></a>
+                            <a class="nav-link" href="<?php echo $pecahd[0]; ?>"><i class="fa fa-instagram"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo $pecahd[1]; ?>"><i class="fa fa-twitter"></i></a>

@@ -116,7 +116,7 @@
             shareIn: "popup",
             showLabel: true,
             showCount: true,
-            shares: ["twitter", "facebook", "linkedin", "whatsapp"]
+            shares: ["twitter", "intagram", "linkedin", "whatsapp"]
         });
     </script>
 </body>
